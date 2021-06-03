@@ -1,0 +1,89 @@
+﻿<Window x:Class="Maze.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maze"
+        mc:Ignorable="d"
+        Title="Maze Bank"
+        Height="600" Width="1060"
+        ResizeMode="NoResize"
+        Style="{StaticResource GreyGradPage}">
+
+
+    <Grid x:Name="LayoutRoot" KeyDown="LayoutRoot_KeyDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0"
+                   Text="aMAZEing App"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   FontSize="22" FontFamily="Segoe Print"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Margin="0, 10, 0, 0">
+            <TextBox Margin="10"
+                     x:Name="XLengthBox"
+                     Height="35"
+                     Text="X" FontSize="24"
+                     GotFocus="TextBox_GotFocus"/>
+
+            <TextBox Margin="10"
+                     x:Name="YLengthBox" 
+                     Height="35" 
+                     Text="Y" FontSize="24"
+                     GotFocus="TextBox_GotFocus"/>
+            
+            <Button Grid.Column="0" Grid.Row="2"
+                x:Name="RandomButton"
+                Content="Random"
+                Style="{StaticResource MenuButton}"
+                Click="RandomButton_Click"/>
+
+            <Button Grid.Column="0" Grid.Row="4"
+                    Margin="0,75,0,0"
+                x:Name="GenerateButton"
+                Content="Generate"
+                Style="{StaticResource MenuButton}"
+                Click="GenerateButton_Click"/>
+            
+            <Button Grid.Column="0" Grid.Row="4"
+                x:Name="SolveButton"
+                Content="Solve"
+                Style="{StaticResource MenuButton}"
+                Click="SolveButton_Click"/>
+        </StackPanel>
+
+        
+
+        <Line Grid.Column="0" Grid.Row="0"
+              Grid.RowSpan="4"
+              X1="220" Y1="0"
+              X2="220" Y2="570"
+              Stroke="Black" StrokeThickness="1"/>
+
+        <Line Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
+              X1="-3" Y1="145"
+              X2="220" Y2="145"
+              Stroke="Black" StrokeThickness="1"/>
+
+        <Canvas Grid.Column="1" Grid.Row="0"
+                Grid.RowSpan="4"
+                Margin="50"
+                x:Name="CanvasPaintingArea">
+            <!--<Rectangle Width="100" Height="200"
+                       Stroke="Black" StrokeThickness="20"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+        </Canvas>
+    </Grid>
+</Window>
