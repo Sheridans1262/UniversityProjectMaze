@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Maze.Algorithms
 {
@@ -15,6 +12,8 @@ namespace Maze.Algorithms
         public int YLength { get; set; }
 
         private long _setIterator;
+
+
 
         public List<List<Cell4Dir>> maze { get; set; }
 
@@ -212,6 +211,5 @@ namespace Maze.Algorithms
                 }
             }
         }
-
     }
 }

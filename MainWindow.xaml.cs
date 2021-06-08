@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Maze.Algorithms;
 
@@ -306,7 +300,7 @@ namespace Maze
         #endregion
 
 
-        #region Maze Solving By Player Functions
+        #region Maze Solving By User Functions
 
         private void SetPlayer()
         {
@@ -372,7 +366,7 @@ namespace Maze
         #endregion
 
 
-        #region Move Functions
+        #region Movement Functions
 
         private void MoveLeft()
         {

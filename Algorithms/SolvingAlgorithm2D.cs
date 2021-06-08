@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 
 namespace Maze.Algorithms
 {
@@ -52,6 +49,7 @@ namespace Maze.Algorithms
             return FacingBottom(Y, X);
         }
 
+        #region Movement Functions
         private byte FacingLeft(int Y, int X)
         {
             if (!Maze[Y][X].BottomWall)
@@ -131,5 +129,6 @@ namespace Maze.Algorithms
 
             return 2;
         }
+        #endregion
     }
 }

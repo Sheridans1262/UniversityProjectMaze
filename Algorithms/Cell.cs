@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-
-namespace Maze.Algorithms
+﻿namespace Maze.Algorithms
 {
     class Cell4Dir
     {
@@ -16,7 +9,6 @@ namespace Maze.Algorithms
 
         public long SetIterator { get; set; }
 
-        public byte WeWereHere { get; set; }
 
 
         public Cell4Dir()
@@ -27,8 +19,6 @@ namespace Maze.Algorithms
             BottomWall = false;
 
             SetIterator = 0;
-
-            WeWereHere = 0;
         }
 
         public Cell4Dir(Cell4Dir cell)
@@ -39,8 +29,6 @@ namespace Maze.Algorithms
             this.BottomWall = cell.BottomWall;
 
             this.SetIterator = cell.SetIterator;
-
-            this.WeWereHere = 0;
         }
     }
 }

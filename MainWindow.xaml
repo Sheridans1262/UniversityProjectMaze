@@ -25,7 +25,8 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="0" Grid.Row="0"
-                   Text="aMAZEing App"
+                   Text="Definitely not a maze generator"
+                   TextWrapping="WrapWithOverflow"
                    VerticalAlignment="Center" HorizontalAlignment="Center"
                    FontSize="22" FontFamily="Segoe Print"/>
 
@@ -81,9 +82,6 @@
                 Grid.RowSpan="4"
                 Margin="50"
                 x:Name="CanvasPaintingArea">
-            <!--<Rectangle Width="100" Height="200"
-                       Stroke="Black" StrokeThickness="20"
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
         </Canvas>
     </Grid>
 </Window>
